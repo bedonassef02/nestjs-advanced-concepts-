@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CoffeesController } from './coffees.controller';
 import { CoffeesService } from './coffees.service';
+import { COFFEES_DATA_SOURCE_KEY } from './utils';
 
 /*
   - To find Circular Dependency
@@ -10,7 +11,6 @@ import { CoffeesService } from './coffees.service';
     = npx madge dist/main.js --image graph.png
 */
 
-export const COFFEES_DATA_SOURCE_KEY = Symbol('COFFEES_DATA_SOURCE');
 @Module({
   controllers: [CoffeesController],
   providers: [CoffeesService, {
