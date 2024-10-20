@@ -14,7 +14,7 @@ import { HttpClientModule } from './http-client/http-client.module';
     CoffeesModule,
     // SchedulerModule, CronModule,
     FibonacciModule,
-    HttpClientModule.register({ baseUrl: 'http://localhost:3000' }),
+    HttpClientModule.forRoot({ baseUrl: 'http://localhost:3000' }),
   ],
   controllers: [AppController],
   providers: [AppService],
