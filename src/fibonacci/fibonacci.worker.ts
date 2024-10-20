@@ -7,7 +7,6 @@ function fib(n: number) {
   return fib(n - 1) + fib(n - 2);
 }
 
-parentPort.on('message', ({ n, id }) => {
-  const result = fib(n);
-  parentPort.postMessage({ result, id });
-});
+module.exports = (n: number) => {
+  return fib(n);
+};
